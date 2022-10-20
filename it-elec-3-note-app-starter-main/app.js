@@ -26,4 +26,13 @@ if(data[2] == 'read') {
     
     present(read())
 }
+if(data[2] =='delete') {
+    let id = data[3];
+    let oldNote = read();
 
+    //import delete
+    const del = require('./del');
+    del(id,oldNote);
+
+    console.log(read());
+}
